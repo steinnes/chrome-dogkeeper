@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "datadog keeper",
+  "description": "if we find ourselves on https://app.datadoghq.com/down.html we redirect to the configured 'default_url' (usually your main dashboard). Also if we detect that a tab has this URL ^ bit has not loaded correctly, we refresh",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs", "storage"
+  ],
+  "background": {
+    "scripts": ["watcher.js"]
+  },
+  "options_page": "options.html"
+}
